@@ -12,10 +12,10 @@ const HeroSection = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
-  const mainImage = "/images/55.jpg"; 
+  // แก้ไขจุดนี้: เพิ่ม /syukursempena/ นำหน้าเพื่อให้ GitHub Pages หาภาพเจอ
+  const mainImage = "/syukursempena/images/55.jpg"; 
 
   return (
-    // เปลี่ยนพื้นหลังหลักเป็นเทาเข้มเกือบดำ (Dark Moody Grey)
     <header ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden bg-[#121212]">
       
       {/* 1. พื้นหลังไล่เฉดสีเทา-ดำ เพื่อสร้างมิติ Moody */}
@@ -42,7 +42,6 @@ const HeroSection = () => {
 
       {/* 3. เนื้อหาหลัก */}
       <motion.div style={{ y, opacity }} className="relative z-10 w-full max-w-3xl px-6">
-        {/* การ์ดสีขาวโปร่งแสง (Glassmorphism) จะดูเด่นขึ้นมากบนพื้นหลังสีเทาเข้ม */}
         <div className="backdrop-blur-xl bg-white/60 border border-white/20 rounded-[2.5rem] p-8 md:p-12 shadow-2xl text-center relative overflow-hidden">
           
           {/* Badge ครบรอบ 10 ปี */}
@@ -80,16 +79,16 @@ const HeroSection = () => {
 
           {/* ชื่อและข้อความ */}
           <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5 }}>
-            <h2 className="text-xl md:text-2xl text-black/80 font-light mb-2">شكورسمفنا </h2>
+            <h2 className="text-xl md:text-2xl text-black/80 font-light mb-2"> شاكور سمفنا  </h2>
             <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
-              معهد بندغستر الإسلامى
+              معهد بندغستر الإسلامي
             </h1>
             <p className="text-black/60 text-lg">โรงเรียนบันนังสตาวิทยานุสรณ์</p>
           </motion.div>
         </div>
       </motion.div>
 
-      {/* สัญลักษณ์แจ้งเตือนให้เลื่อนลง - ปรับสีให้ขาวขึ้นเพื่อให้เห็นชัดบนพื้นหลังมืด */}
+      {/* สัญลักษณ์แจ้งเตือนให้เลื่อนลง */}
       <motion.div 
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 flex flex-col items-center gap-2 z-20"
         initial={{ opacity: 0 }}

@@ -2,14 +2,19 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
+// ใช้รหัสจริงจากหน้าจอ Firebase ของคุณ
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCFer0kcwMKP6qC0v6xXeBcPGAdFu5bLaI",
+  authDomain: "syukursempena.firebaseapp.com",
+  projectId: "syukursempena",
+  storageBucket: "syukursempena.firebasestorage.app",
+  messagingSenderId: "27990487204",
+  appId: "1:27990487204:web:c4cf031470c3f9c65b631",
+  measurementId: "G-CB0J6GLD4M"
 };
 
+// เริ่มต้นการทำงาน (ประกาศเพียงครั้งเดียว)
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app); // ส่งออกตัวแปร db เพื่อให้ไฟล์อื่นเรียกใช้ได้
+
+// ส่งออกตัวแปร db เพื่อให้ระบบดึงข้อมูลได้
+export const db = getFirestore(app);

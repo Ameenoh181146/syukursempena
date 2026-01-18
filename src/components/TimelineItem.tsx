@@ -60,7 +60,7 @@ const TimelineItem = ({ year, title, description, images = [], isStart }: any) =
               </div>
               
               {/* สโลแกนที่คุณชอบ แอบใส่ไว้ตรงนี้ได้ครับ */}
-              <p className="text-[9px] text-slate-500 mb-3 italic">"Yang jauh kita dekatkan, Yang rapatเรา mesrakan"</p>
+              <p className="text-[9px] text-slate-500 mb-3 italic">"Yang jauh kita dekatkan, Yang rapat kita mesrakan"</p>
 
               <div className="grid grid-cols-3 gap-2">
                 {visibleImages.map((img: string, idx: number) => (
